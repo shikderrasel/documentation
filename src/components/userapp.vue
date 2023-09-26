@@ -198,6 +198,7 @@ function calculate() {
             text-align: center;
             font-size: 30px;
             color: var(--text-color);
+            margin-bottom: 20px;
         }
 
         form {
@@ -221,7 +222,6 @@ function calculate() {
                 }
 
                 input[type=file] {
-
                     width: 100%;
                     max-width: 40%;
                     color: var(--text-color);
@@ -351,16 +351,20 @@ function calculate() {
             font-size: 30px;
             text-align: center;
             border-bottom: 2px solid var(--border-color);
+            padding: 5px 0;
         }
 
         ul {
             .historylist {
+                list-style: none;
+
                 .history {
                     padding: 10px;
                     margin-top: 4px;
                     margin-bottom: 4px;
                     border-radius: 6px;
                     box-shadow: var(--box-shado);
+                    font-size: 20px;
                 }
             }
         }
@@ -377,19 +381,42 @@ function calculate() {
                 .useradd {
                     flex-direction: column;
                     justify-content: start;
+                    align-items: flex-start;
+                    gap: 0;
 
                     input[type=text] {
                         max-width: 100%;
+                        padding: 8px 10px;
                     }
 
                     input[type=file] {
-                        margin-top: 10px;
+                        margin-top: 15px;
+                        max-width: 100%;
                     }
 
+                }
+
+                .userbtn {
+                    font-size: 15px;
                 }
             }
 
             .form {
+                .value {
+                    font-size: 15px;
+                    display: block;
+
+                    input {
+                        padding: 6px 12px;
+                        width: 100%;
+                        margin-top: 5px;
+                    }
+                }
+
+                h1 {
+                    font-size: 18px;
+                }
+
                 .userlist {
                     grid-template-columns: repeat(2, 1fr);
 
@@ -400,14 +427,36 @@ function calculate() {
                             height: 30px;
                             margin-bottom: 3px;
                         }
+
+                        .useritem {
+                            font-size: 15px;
+                        }
                     }
                 }
+
+                .subbtn {
+                    font-size: 15px;
+                }
             }
+
 
             ul {
                 .username {
                     h1 {
-                        font-size: 20px;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .historyhed {
+                font-size: 18px;
+            }
+
+            ul {
+                .historylist {
+
+                    .history {
+                        font-size: 14px;
                     }
                 }
             }
