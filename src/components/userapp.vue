@@ -128,7 +128,7 @@ function calculate() {
                     <label :for="list.id" v-for="list in user" :key="list.id" class="userbox">
                         <span @click="removeuser(list.name)" class="userremove">x</span>
                         <div class="image">
-                            <img :src="list.image" alt="image">
+                            <img :src="list.image" alt="">
                         </div>
                         <div class="useritem">
                             <input type="radio" :value="list.name" :id="list.id" v-model="from" class="">
@@ -142,7 +142,7 @@ function calculate() {
                     <label :for="'to-' + list.id" v-for="list in user" :key="list.id" class="userbox">
                         <span @click="removeuser(list.name)" class="userremove">x</span>
                         <div class="image">
-                            <img :src="list.image" alt="image">
+                            <img :src="list.image" alt="">
                         </div>
                         <div class="useritem">
                             <input type="radio" :value="list.name" :id="'to-' + list.id" v-model="to" class="">
@@ -271,6 +271,7 @@ function calculate() {
                 .userbox {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     width: 100%;
                     box-shadow: var(--box-shado);
                     position: relative;
@@ -289,8 +290,6 @@ function calculate() {
                     .image {
                         width: 40px;
                         height: 40px;
-                        margin: auto;
-                        position: relative;
 
                         img {
                             width: 100%;
@@ -298,11 +297,7 @@ function calculate() {
                             object-fit: cover;
                             border-radius: 50%;
                             border: 1px solid var(--border-color);
-                            margin-bottom: 2px;
-                            font-size: 12px;
                             text-align: center;
-                            top: 0;
-                            margin: auto;
                         }
                     }
 
@@ -312,6 +307,7 @@ function calculate() {
 
                     }
                 }
+               
             }
 
             .subbtn {
